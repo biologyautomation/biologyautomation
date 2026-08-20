@@ -20,7 +20,7 @@ jobs:
     if: >-
       github.event.label.name == 'zenodo-approve' &&
       github.event.issue.state == 'open' &&
-      github.actor == 'biologyautomation'
+      github.actor == 'rotsl'
 
     runs-on: ubuntu-latest
 
