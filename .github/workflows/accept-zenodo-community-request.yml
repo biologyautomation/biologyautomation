@@ -20,7 +20,7 @@ jobs:
     if: >-
       github.event.label.name == 'zenodo-approve' &&
       github.event.issue.state == 'open' &&
-      github.actor == 'rotsl'
+      github.actor == 'biologyautomation'
 
     runs-on: ubuntu-latest
 
@@ -151,7 +151,7 @@ jobs:
               repository = repository.rstrip(".,)")
               full_name = f"{owner}/{repository}"
 
-              if full_name.lower() != "rotsl/biologyautomation":
+              if full_name.lower() != "biologyautomation/biologyautomation":
                   external_repositories.append(full_name)
 
           external_repositories = sorted(set(external_repositories))
