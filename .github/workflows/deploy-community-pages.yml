@@ -89,7 +89,7 @@ jobs:
 
           replacements = {
               "../../issues/new?template=submission.yml":
-                  "https://github.com/rotsl/biologyautomation/issues/new"
+                  "https://github.com/biologyautomation/biologyautomation/issues/new"
                   "?template=submission.yml",
               "docs/SUBMISSION_GUIDE.md": "submission-guide.md",
               "docs/CURATION_POLICY.md": "curation-policy.md",
@@ -99,7 +99,7 @@ jobs:
               "ACCEPTED_REPOSITORIES.md":
                   "accepted-repositories.md",
               "accepted-repositories.json":
-                  "https://github.com/rotsl/biologyautomation/blob/main/"
+                  "https://github.com/biologyautomation/biologyautomation/blob/main/"
                   "accepted-repositories.json",
           }
 
@@ -120,9 +120,9 @@ jobs:
           site_description: >-
             Community website and submission portal for the
             Automation in Biology Zenodo community.
-          site_url: https://rotsl.github.io/biologyautomation/
-          repo_url: https://github.com/rotsl/biologyautomation
-          repo_name: rotsl/biologyautomation
+          site_url: https://biologyautomation.github.io/biologyautomation/
+          repo_url: https://github.com/biologyautomation/biologyautomation
+          repo_name: biologyautomation/biologyautomation
           edit_uri: ""
 
           docs_dir: .pages-src
@@ -176,7 +176,7 @@ jobs:
           extra:
             social:
               - icon: fontawesome/brands/github
-                link: https://github.com/rotsl/biologyautomation
+                link: https://github.com/biologyautomation/biologyautomation
               - icon: fontawesome/solid/archive
                 link: https://zenodo.org/communities/biologyautomation
           YAML
