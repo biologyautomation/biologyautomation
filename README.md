@@ -6,11 +6,13 @@
        width="320">
 </p>
 
-This repository is the public submission, curation-tracking, documentation, and governance portal for the **Automation in Biology** community on Zenodo.
+This repository is the public submission, curation-tracking, documentation, governance, and general accepted-software registry for the **Automation in Biology** community on Zenodo.
 
 The community curates papers, software, datasets, protocols, book chapters, technical reports, hardware designs, presentations, and other scholarly outputs related to automation in biological research.
 
-Zenodo remains the authoritative location for deposited files, metadata, licences, versions, DOIs, and community membership. GitHub provides structured submission issues, transparent curation status, validation, and the accepted-software registry.
+Zenodo remains the authoritative location for deposited files, metadata, licences, versions, DOIs, and community membership. This GitHub repository provides structured submission issues, transparent curation status, validation, and the general accepted-software registry.
+
+Accepted **R packages** are additionally indexed through the separate [Automation in Biology R-universe registry](https://github.com/biologyautomation/biologyautomation.r-universe.dev), which publishes packages at [biologyautomation.r-universe.dev](https://biologyautomation.r-universe.dev/). Non-R software and other accepted software repositories remain represented through this main community repository and its accepted-software registry.
 
 ## Submit a research output
 
@@ -26,7 +28,8 @@ Research outputs are deposited through Zenodo. This GitHub repository does not h
 6. Respond to any curator questions or requested changes.
 7. After review, a maintainer applies the `zenodo-approve` label.
 8. A protected GitHub Actions workflow accepts the pending Zenodo community-inclusion request, verifies public community membership, and applies the `accepted` label.
-9. The accepted-registry workflow independently verifies membership and updates the public software registry.
+9. The accepted-registry workflow independently verifies membership and updates the public software registry in this repository.
+10. If the accepted software is a valid R package, it may also be indexed in the separate Automation in Biology R-universe registry.
 
 [Open a GitHub submission issue](../../issues/new?template=submission.yml)
 
@@ -134,10 +137,10 @@ The request is not automatically approved merely because `.zenodo.json` names th
 
 Open a submission issue in this repository and provide:
 
-- The Zenodo record URL
-- The software repository URL
-- The release version
-- A description of its relevance to automation in biology
+* The Zenodo record URL
+* The software repository URL
+* The release version
+* A description of its relevance to automation in biology
 
 [Open a software submission issue](../../issues/new?template=submission.yml)
 
@@ -147,13 +150,13 @@ The GitHub–Zenodo integration is intended primarily for software releases.
 
 Use a normal Zenodo deposit for outputs such as:
 
-- Papers
-- Book chapters
-- Datasets not distributed as software releases
-- Posters
-- Presentations
-- Experimental protocols
-- Hardware documentation requiring separately packaged files
+* Papers
+* Book chapters
+* Datasets not distributed as software releases
+* Posters
+* Presentations
+* Experimental protocols
+* Hardware documentation requiring separately packaged files
 
 Each contributor should enable the integration using their own GitHub and Zenodo accounts.
 
@@ -163,73 +166,91 @@ Contributors must never send Zenodo API tokens, GitHub credentials, passwords, o
 
 The community considers:
 
-- Research papers and preprints
-- Software and source code
-- Research datasets
-- Experimental protocols and workflows
-- Book chapters
-- Technical reports
-- Posters and presentations
-- Hardware designs and documentation
-- Educational and training materials
+* Research papers and preprints
+* Software and source code
+* Research datasets
+* Experimental protocols and workflows
+* Book chapters
+* Technical reports
+* Posters and presentations
+* Hardware designs and documentation
+* Educational and training materials
 
 Submissions must have a clear and substantial connection to automation in biological research.
 
 Relevant topics include:
 
-- Laboratory automation
-- Robotic experimentation
-- Automated sample preparation
-- High-throughput experimentation
-- Autonomous and self-driving laboratories
-- Biofoundries
-- Automated microscopy and phenotyping
-- Automated biological data analysis
-- Workflow-management systems
-- Laboratory-information systems
-- Scientific software and instrumentation
-- Standards and interoperability
-- Reproducible automated protocols
-- Machine learning integrated with experimental workflows
+* Laboratory automation
+* Robotic experimentation
+* Automated sample preparation
+* High-throughput experimentation
+* Autonomous and self-driving laboratories
+* Biofoundries
+* Automated microscopy and phenotyping
+* Automated biological data analysis
+* Workflow-management systems
+* Laboratory-information systems
+* Scientific software and instrumentation
+* Standards and interoperability
+* Reproducible automated protocols
+* Machine learning integrated with experimental workflows
 
 ## Important submission rules
 
-- Submitters must deposit their own files through their own Zenodo account.
-- Do not upload confidential, sensitive, personal, restricted, or unpublished research files to GitHub.
-- A GitHub issue does not constitute acceptance into the Zenodo community.
-- Applying `zenodo-approve` authorises the protected acceptance workflow; it is a curator-only action.
-- Community inclusion is decided by the Zenodo community curators.
-- Acceptance indicates relevance to the community scope; it is not peer review or scientific endorsement.
-- Submitters remain responsible for authorship, licensing, ethics, privacy, copyright, and record accuracy.
+* Submitters must deposit their own files through their own Zenodo account.
+* Do not upload confidential, sensitive, personal, restricted, or unpublished research files to GitHub.
+* A GitHub issue does not constitute acceptance into the Zenodo community.
+* Applying `zenodo-approve` authorises the protected acceptance workflow; it is a curator-only action.
+* Community inclusion is decided by the Zenodo community curators.
+* Acceptance indicates relevance to the community scope; it is not peer review or scientific endorsement.
+* Submitters remain responsible for authorship, licensing, ethics, privacy, copyright, and record accuracy.
+
+## R packages and R-universe
+
+Automation in Biology uses a separate R-universe registry for accepted R packages:
+
+* **R-universe registry repository:** https://github.com/biologyautomation/biologyautomation.r-universe.dev
+* **Published R-universe:** https://biologyautomation.r-universe.dev/
+
+The separation is intentional:
+
+* This repository, `biologyautomation/biologyautomation`, is the community's submission, curation, governance, documentation, and general accepted-software registry.
+* The R-universe registry, `biologyautomation/biologyautomation.r-universe.dev`, contains `packages.json` and indexes accepted software that is also a valid R package.
+* Non-R software is not added to the R-universe registry.
+* R packages remain subject to the same Automation in Biology submission and curation process as other software; R-universe is an additional package-distribution and discovery layer, not a separate acceptance process.
+
+An R package may remain hosted in its original public Git repository. Inclusion in the Automation in Biology R-universe does not require transferring ownership of the package repository to the `biologyautomation` GitHub organization.
 
 ## Documentation
 
-- [Submission guide](docs/SUBMISSION_GUIDE.md)
-- [Curation policy](docs/CURATION_POLICY.md)
-- [Contributing guide](CONTRIBUTING.md)
-- [Code of conduct](CODE_OF_CONDUCT.md)
-- [Security policy](SECURITY.md)
+* [Submission guide](docs/SUBMISSION_GUIDE.md)
+* [Curation policy](docs/CURATION_POLICY.md)
+* [Contributing guide](CONTRIBUTING.md)
+* [Code of conduct](CODE_OF_CONDUCT.md)
+* [Security policy](SECURITY.md)
 
 ## Zenodo community
 
 **Community identifier:** `biologyautomation`
 
-**Community URL:**  
+**Community URL:**
 https://zenodo.org/communities/biologyautomation
 
 ## Repository scope
 
 This repository contains:
 
-- Submission forms
-- Documentation
-- Validation workflows
-- Protected Zenodo acceptance automation
-- Public issue-based submission tracking
-- Accepted-software registry automation
-- Community governance information
+* Submission forms
+* Documentation
+* Validation workflows
+* Protected Zenodo acceptance automation
+* Public issue-based submission tracking
+* General accepted-software registry automation
+* Community governance information
 
-It is not an archival repository for submitted research outputs. Zenodo is the authoritative location for deposited records, files, licences, versions, DOIs, and community membership.
+The separate [Automation in Biology R-universe registry](https://github.com/biologyautomation/biologyautomation.r-universe.dev) is used specifically to index accepted R packages for publication through [biologyautomation.r-universe.dev](https://biologyautomation.r-universe.dev/).
+
+This repository is not an archival repository for submitted research outputs. Zenodo is the authoritative location for deposited records, files, licences, versions, DOIs, and community membership.
 
 ## Licence
 
@@ -239,9 +260,11 @@ Research outputs deposited on Zenodo retain the licences selected by their respe
 
 ## Accepted repository registry
 
-Accepted software repositories are recorded in two formats:
+Accepted software repositories are recorded in this repository in two formats:
 
-- [Accepted repositories](ACCEPTED_REPOSITORIES.md)
-- [Machine-readable registry](accepted-repositories.json)
+* [Accepted repositories](ACCEPTED_REPOSITORIES.md)
+* [Machine-readable registry](accepted-repositories.json)
 
 After the Zenodo acceptance workflow applies the `accepted` label, a second GitHub Actions workflow independently verifies that the record is publicly present in the `biologyautomation` community, opens a generated registry pull request, and merges that pull request after safety checks.
+
+Accepted repositories that are valid R packages may additionally be listed in the separate [`biologyautomation.r-universe.dev`](https://github.com/biologyautomation/biologyautomation.r-universe.dev) registry for building and distribution through R-universe. Other accepted software remains represented by the general registry in this repository.
